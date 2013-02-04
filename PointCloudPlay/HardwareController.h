@@ -30,4 +30,15 @@ class PointCloudApplication;
 	double g_scale;
 }
 
+@property (nonatomic, retain) AVCaptureSession *captureSession;
+@property (nonatomic, retain) GLView *glView;
+@property (nonatomic) CVPixelBufferRef pixelBuffer;
+@property (nonatomic, retain) CMMotionManager *motionManager;
+@property (nonatomic) double g_scale;
+@property (nonatomic) Float64 timestamp;
+@property (nonatomic) BOOL restartingCamera;
+@property (nonatomic) BOOL accelerometer_available;
+@property (nonatomic) BOOL device_motion_available;
+@property (nonatomic) PointCloudApplication* pointcloudApplication;
+
 @end

@@ -8,6 +8,9 @@
 
 #import "GLView.h"
 
+#import <OpenGLES/EAGLDrawable.h>
+#import <QuartzCore/QuartzCore.h>
+
 @implementation GLView
 
 @synthesize context;

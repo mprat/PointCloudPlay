@@ -15,6 +15,13 @@
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 
+// iOS time
+#include <QuartzCore/QuartzCore.h>
+
+inline double current_time() {
+    return CACurrentMediaTime();
+}
+
 class PointCloudApplication {
 public:
     PointCloudApplication(int viewport_width, int viewport_height,

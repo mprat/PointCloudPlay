@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9828EBC216C04EB30060F0F1 /* TextureUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */; };
 		9889EDEE16C021590009F1C7 /* libpointcloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9889EDEC16C021590009F1C7 /* libpointcloud.a */; };
 		9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */; };
 		9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDF616C028460009F1C7 /* HardwareController.mm */; };
@@ -29,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9828EBBE16C04EA00060F0F1 /* TextureUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextureUtilities.h; path = ../TextureUtilities.h; sourceTree = "<group>"; };
+		9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureUtilities.cpp; sourceTree = "<group>"; };
+		9828EBC116C04EB30060F0F1 /* TextureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureUtilities.h; sourceTree = "<group>"; };
 		9889EDEB16C0210C0009F1C7 /* PointCloudApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointCloudApplication.h; sourceTree = "<group>"; };
 		9889EDEC16C021590009F1C7 /* libpointcloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpointcloud.a; path = ../../libpointcloud_iOS/libpointcloud.a; sourceTree = "<group>"; };
 		9889EDED16C021590009F1C7 /* PointCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointCloud.h; path = ../../libpointcloud_iOS/PointCloud.h; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 		98E9E59116BAFAF700BB5DB9 /* PointCloudPlay */ = {
 			isa = PBXGroup;
 			children = (
+				9828EBBE16C04EA00060F0F1 /* TextureUtilities.h */,
 				9889EDEC16C021590009F1C7 /* libpointcloud.a */,
 				9889EDED16C021590009F1C7 /* PointCloud.h */,
 				98E9E59A16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.h */,
@@ -124,6 +129,8 @@
 				9889EDF616C028460009F1C7 /* HardwareController.mm */,
 				9889EDFB16C0292E0009F1C7 /* GLView.h */,
 				9889EDFC16C0292E0009F1C7 /* GLView.m */,
+				9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */,
+				9828EBC116C04EB30060F0F1 /* TextureUtilities.h */,
 			);
 			path = PointCloudPlay;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 				9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */,
 				9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */,
 				9889EDFD16C0292E0009F1C7 /* GLView.m in Sources */,
+				9828EBC216C04EB30060F0F1 /* TextureUtilities.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
