@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9889EDEE16C021590009F1C7 /* libpointcloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9889EDEC16C021590009F1C7 /* libpointcloud.a */; };
+		9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */; };
+		9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDF616C028460009F1C7 /* HardwareController.mm */; };
+		9889EDFD16C0292E0009F1C7 /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDFC16C0292E0009F1C7 /* GLView.m */; };
 		98E9E58816BAFAF700BB5DB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58716BAFAF700BB5DB9 /* UIKit.framework */; };
 		98E9E58A16BAFAF700BB5DB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58916BAFAF700BB5DB9 /* Foundation.framework */; };
 		98E9E58C16BAFAF700BB5DB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58B16BAFAF700BB5DB9 /* CoreGraphics.framework */; };
@@ -14,7 +18,7 @@
 		98E9E59016BAFAF700BB5DB9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58F16BAFAF700BB5DB9 /* OpenGLES.framework */; };
 		98E9E59616BAFAF700BB5DB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E59416BAFAF700BB5DB9 /* InfoPlist.strings */; };
 		98E9E59816BAFAF700BB5DB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E9E59716BAFAF700BB5DB9 /* main.m */; };
-		98E9E59C16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.m */; };
+		98E9E59C16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm */; };
 		98E9E59E16BAFAF700BB5DB9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E59D16BAFAF700BB5DB9 /* Default.png */; };
 		98E9E5A016BAFAF700BB5DB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E59F16BAFAF700BB5DB9 /* Default@2x.png */; };
 		98E9E5A216BAFAF700BB5DB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E5A116BAFAF700BB5DB9 /* Default-568h@2x.png */; };
@@ -25,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9889EDEB16C0210C0009F1C7 /* PointCloudApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointCloudApplication.h; sourceTree = "<group>"; };
+		9889EDEC16C021590009F1C7 /* libpointcloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpointcloud.a; path = ../../libpointcloud_iOS/libpointcloud.a; sourceTree = "<group>"; };
+		9889EDED16C021590009F1C7 /* PointCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointCloud.h; path = ../../libpointcloud_iOS/PointCloud.h; sourceTree = "<group>"; };
+		9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointCloudApplication.cpp; sourceTree = "<group>"; };
+		9889EDF516C027FD0009F1C7 /* HardwareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HardwareController.h; sourceTree = "<group>"; };
+		9889EDF616C028460009F1C7 /* HardwareController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HardwareController.mm; sourceTree = "<group>"; };
+		9889EDFB16C0292E0009F1C7 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		9889EDFC16C0292E0009F1C7 /* GLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
 		98E9E58316BAFAF700BB5DB9 /* PointCloudPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointCloudPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E9E58716BAFAF700BB5DB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98E9E58916BAFAF700BB5DB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,7 +48,7 @@
 		98E9E59716BAFAF700BB5DB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E9E59916BAFAF700BB5DB9 /* PointCloudPlay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PointCloudPlay-Prefix.pch"; sourceTree = "<group>"; };
 		98E9E59A16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointCloudPlayAppDelegate.h; sourceTree = "<group>"; };
-		98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointCloudPlayAppDelegate.m; sourceTree = "<group>"; };
+		98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = PointCloudPlayAppDelegate.mm; sourceTree = "<group>"; };
 		98E9E59D16BAFAF700BB5DB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		98E9E59F16BAFAF700BB5DB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		98E9E5A116BAFAF700BB5DB9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 				98E9E58C16BAFAF700BB5DB9 /* CoreGraphics.framework in Frameworks */,
 				98E9E58E16BAFAF700BB5DB9 /* GLKit.framework in Frameworks */,
 				98E9E59016BAFAF700BB5DB9 /* OpenGLES.framework in Frameworks */,
+				9889EDEE16C021590009F1C7 /* libpointcloud.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,14 +108,22 @@
 		98E9E59116BAFAF700BB5DB9 /* PointCloudPlay */ = {
 			isa = PBXGroup;
 			children = (
+				9889EDEC16C021590009F1C7 /* libpointcloud.a */,
+				9889EDED16C021590009F1C7 /* PointCloud.h */,
 				98E9E59A16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.h */,
-				98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.m */,
+				98E9E59B16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm */,
 				98E9E5A316BAFAF700BB5DB9 /* MainStoryboard.storyboard */,
 				98E9E5A616BAFAF700BB5DB9 /* Shader.fsh */,
 				98E9E5A816BAFAF700BB5DB9 /* Shader.vsh */,
 				98E9E5AA16BAFAF700BB5DB9 /* PointCloudPlayViewController.h */,
 				98E9E5AB16BAFAF700BB5DB9 /* PointCloudPlayViewController.m */,
 				98E9E59216BAFAF700BB5DB9 /* Supporting Files */,
+				9889EDEB16C0210C0009F1C7 /* PointCloudApplication.h */,
+				9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */,
+				9889EDF516C027FD0009F1C7 /* HardwareController.h */,
+				9889EDF616C028460009F1C7 /* HardwareController.mm */,
+				9889EDFB16C0292E0009F1C7 /* GLView.h */,
+				9889EDFC16C0292E0009F1C7 /* GLView.m */,
 			);
 			path = PointCloudPlay;
 			sourceTree = "<group>";
@@ -191,8 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E9E59816BAFAF700BB5DB9 /* main.m in Sources */,
-				98E9E59C16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.m in Sources */,
+				98E9E59C16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm in Sources */,
 				98E9E5AC16BAFAF700BB5DB9 /* PointCloudPlayViewController.m in Sources */,
+				9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */,
+				9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */,
+				9889EDFD16C0292E0009F1C7 /* GLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +300,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PointCloudPlay/PointCloudPlay-Prefix.pch";
 				INFOPLIST_FILE = "PointCloudPlay/PointCloudPlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libpointcloud_iOS\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +315,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PointCloudPlay/PointCloudPlay-Prefix.pch";
 				INFOPLIST_FILE = "PointCloudPlay/PointCloudPlay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libpointcloud_iOS\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -311,6 +343,7 @@
 				98E9E5B116BAFAF700BB5DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
