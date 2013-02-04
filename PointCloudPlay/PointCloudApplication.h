@@ -10,8 +10,9 @@
 #define PointCloudPlay_PointCloudApplication_h
 
 #include "PointCloud.h"
+#include "TextureUtilities.h"
 
-//openGL stuff to include
+// changed to iOS opengl ES2 includes
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 
@@ -22,9 +23,12 @@ inline double current_time() {
     return CACurrentMediaTime();
 }
 
+
 class PointCloudApplication {
+	
 public:
-    PointCloudApplication(int viewport_width, int viewport_height,
+	
+	PointCloudApplication(int viewport_width, int viewport_height,
 						  int video_width, int video_height,
 						  pointcloud_video_format video_format,
 						  const char* resource_path,
@@ -46,7 +50,8 @@ public:
 	
 	void on_pause();
 	void on_resume();
-    
+	
+	
 protected:
 	
 	// Switch to orthogonal projection (for UI etc)
@@ -74,6 +79,7 @@ protected:
 	pointcloud_matrix_4x4 projection_matrix;
 	pointcloud_matrix_4x4 camera_matrix;
     
+	
 private:
 	
 	bool stop_opengl;
@@ -94,6 +100,7 @@ private:
 	float video_texcoords[8];
 	
 	double last_frame_clock;
+	
 };
 
 extern bool run_opengl;

@@ -99,31 +99,31 @@ void PointCloudApplication::load_camera_texture(char *data) {
 					GL_BGRA, GL_UNSIGNED_BYTE, data);
 }
 
-
+//TODO: change to 2.0
 void PointCloudApplication::render_camera_frame() {
-	switch_to_ortho();
-	
-	//glClearColor(0.0, 0.0, 0.0, 1.0);
-	glClear(/*GL_COLOR_BUFFER_BIT | */GL_DEPTH_BUFFER_BIT);
-	
-	glBindTexture(GL_TEXTURE_2D, video_texture);
-    
-	glEnable(GL_TEXTURE_2D);
-	glDisable(GL_DEPTH_TEST);
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
-	
-	glColor4f(1.0, 1.0, 1.0, 1.0);
-	glVertexPointer(2, GL_FLOAT, 0, video_vertices);
-	glTexCoordPointer( 2, GL_FLOAT, 0, video_texcoords);
-	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
-	
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState(GL_VERTEX_ARRAY);
-	
-	glDisable(GL_TEXTURE_2D);
-	glEnable(GL_DEPTH_TEST);
+//	switch_to_ortho();
+//	
+//	//glClearColor(0.0, 0.0, 0.0, 1.0);
+//	glClear(/*GL_COLOR_BUFFER_BIT | */GL_DEPTH_BUFFER_BIT);
+//	
+//	glBindTexture(GL_TEXTURE_2D, video_texture);
+//    
+//	glEnable(GL_TEXTURE_2D);
+//	glDisable(GL_DEPTH_TEST);
+//	
+//	glEnableClientState(GL_VERTEX_ARRAY);
+//	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
+//	
+//	glColor4f(1.0, 1.0, 1.0, 1.0);
+//	glVertexPointer(2, GL_FLOAT, 0, video_vertices);
+//	glTexCoordPointer( 2, GL_FLOAT, 0, video_texcoords);
+//	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+//	
+//	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+//	glDisableClientState(GL_VERTEX_ARRAY);
+//	
+//	glDisable(GL_TEXTURE_2D);
+//	glEnable(GL_DEPTH_TEST);
 }
 
 void PointCloudApplication::clean_up() {
@@ -214,117 +214,122 @@ void PointCloudApplication::process_camera_frame(char *data, double timestamp) {
 /*
  * Renders the tracked points
  */
+//TODO: change to 2.0
 void PointCloudApplication::render_point_cloud() {
-	
-    pointcloud_state state = pointcloud_get_state();
-    
-    if (state == POINTCLOUD_INITIALIZING ||
-		state == POINTCLOUD_TRACKING_SLAM_MAP) {
-        
-        pointcloud_point_cloud* points = pointcloud_get_points();
-		
-        if (points) {
-			switch_to_camera();
-			disable_lighting();
-            
-			glDisable(GL_DEPTH_TEST);
-            
-            glColor4f(0.9, 0.95, 1.0, 0.6);
-            
-            glEnable(GL_POINT_SPRITE_OES);
-            glEnable(GL_TEXTURE_2D);
-            
-            glEnable(GL_BLEND);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-			
-			glBindTexture(GL_TEXTURE_2D, point_texture);
-            
-            glTexEnvi(GL_POINT_SPRITE_OES, GL_COORD_REPLACE_OES, GL_TRUE);
-            
-            glPointParameterf(GL_POINT_SIZE_MAX, 64.0f);
-            
-			glPointSize(32.0);
-			glEnableClientState(GL_VERTEX_ARRAY);
-            glVertexPointer(3,GL_FLOAT,0, (float *)points->points);
-            glDrawArrays(GL_POINTS,0, points->size);
-			
-			glDisableClientState(GL_VERTEX_ARRAY);
-            
-            glColor4f(1, 1, 1, 1);
-			
-			glPointSize(1);
-            
-			glDisable(GL_BLEND);
-			glDisable(GL_TEXTURE_2D);
-			glDisable(GL_POINT_SPRITE_OES);
-			
-			pointcloud_destroy_point_cloud(points);
-			
-			switch_to_ortho();
-        }
-    }
+//	
+//    pointcloud_state state = pointcloud_get_state();
+//    
+//    if (state == POINTCLOUD_INITIALIZING ||
+//		state == POINTCLOUD_TRACKING_SLAM_MAP) {
+//        
+//        pointcloud_point_cloud* points = pointcloud_get_points();
+//		
+//        if (points) {
+//			switch_to_camera();
+//			disable_lighting();
+//            
+//			glDisable(GL_DEPTH_TEST);
+//            
+//            glColor4f(0.9, 0.95, 1.0, 0.6);
+//            
+//            glEnable(GL_POINT_SPRITE_OES);
+//            glEnable(GL_TEXTURE_2D);
+//            
+//            glEnable(GL_BLEND);
+//            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//			
+//			glBindTexture(GL_TEXTURE_2D, point_texture);
+//            
+//            glTexEnvi(GL_POINT_SPRITE_OES, GL_COORD_REPLACE_OES, GL_TRUE);
+//            
+//            glPointParameterf(GL_POINT_SIZE_MAX, 64.0f);
+//            
+//			glPointSize(32.0);
+//			glEnableClientState(GL_VERTEX_ARRAY);
+//            glVertexPointer(3,GL_FLOAT,0, (float *)points->points);
+//            glDrawArrays(GL_POINTS,0, points->size);
+//			
+//			glDisableClientState(GL_VERTEX_ARRAY);
+//            
+//            glColor4f(1, 1, 1, 1);
+//			
+//			glPointSize(1);
+//            
+//			glDisable(GL_BLEND);
+//			glDisable(GL_TEXTURE_2D);
+//			glDisable(GL_POINT_SPRITE_OES);
+//			
+//			pointcloud_destroy_point_cloud(points);
+//			
+//			switch_to_ortho();
+//        }
+//    }
 }
 
 
 /*
  * Switches to orthogonal drawing (e.g. UI)
  */
+//TODO: switch to 2.0
 void PointCloudApplication::switch_to_ortho() {
-	disable_lighting();
-	
-	glDisable(GL_DEPTH_TEST);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	glOrthof(0, context.viewport_width, context.viewport_height, 0, -1, 1);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
+//	disable_lighting();
+//	
+//	glDisable(GL_DEPTH_TEST);
+//	glMatrixMode(GL_PROJECTION);
+//	glLoadIdentity();
+//	glOrthof(0, context.viewport_width, context.viewport_height, 0, -1, 1);
+//	glMatrixMode(GL_MODELVIEW);
+//	glLoadIdentity();
 }
 
 /*
  * Switches to camera perspective ("AR mode")
  */
+//TODO: switch to 2.0
 void PointCloudApplication::switch_to_camera() {
-	enable_lighting();
-	
-	glShadeModel(GL_SMOOTH);
-	
-	glDisable(GL_BLEND);
-	glDisable(GL_TEXTURE_2D);
-	
-	glEnable(GL_DEPTH_TEST);
-	
-	// Set up projection matrix
-	glMatrixMode(GL_PROJECTION);
-	glLoadMatrixf(projection_matrix.data);
-    
-	// Set up camera matrix
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(camera_matrix.data);
+//	enable_lighting();
+//	
+//	glShadeModel(GL_SMOOTH);
+//	
+//	glDisable(GL_BLEND);
+//	glDisable(GL_TEXTURE_2D);
+//	
+//	glEnable(GL_DEPTH_TEST);
+//	
+//	// Set up projection matrix
+//	glMatrixMode(GL_PROJECTION);
+//	glLoadMatrixf(projection_matrix.data);
+//    
+//	// Set up camera matrix
+//	glMatrixMode(GL_MODELVIEW);
+//	glLoadMatrixf(camera_matrix.data);
 }
 
 
 /*
  * Initializes basic lighting
  */
+//TODO: switch to 2.0
 void PointCloudApplication::init_lighting() {
-	float light_ambient[4] = {0.2f, 0.2f, 0.2f, 1.0f};
-	float light_diffuse[4] = {1.0f, 1.0f, 1.0, 1.0f};
-	float light_specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
-	
-	// Assign created components to GL_LIGHT0
-	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
+//	float light_ambient[4] = {0.2f, 0.2f, 0.2f, 1.0f};
+//	float light_diffuse[4] = {1.0f, 1.0f, 1.0, 1.0f};
+//	float light_specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+//	
+//	// Assign created components to GL_LIGHT0
+//	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
+//	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
+//	glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
 }
 
-
+//TODO: switch to 2.0
 void PointCloudApplication::enable_lighting() {
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+//	glEnable(GL_LIGHTING);
+//	glEnable(GL_LIGHT0);
 }
 
 
+//TODO: switch to 2.0
 void PointCloudApplication::disable_lighting() {
-	glDisable(GL_LIGHTING);
-	glDisable(GL_LIGHT0);
+//	glDisable(GL_LIGHTING);
+//	glDisable(GL_LIGHT0);
 }
