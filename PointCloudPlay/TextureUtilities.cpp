@@ -73,6 +73,8 @@ GLuint read_png_texture(const char *name, bool pixel_texture) {
  */
 void draw_image(GLuint texture_id, float x, float y, float width, float height, float texcoord_x1, float texcoord_y1, float texcoord_x2, float texcoord_y2, double opacity) {
 	
+    //TODO: add in vertices and texture coordinates to array buffers
+    
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -82,18 +84,18 @@ void draw_image(GLuint texture_id, float x, float y, float width, float height, 
 	float vertices[8] = {x, y, x+width, y, x+width, y+height, x, y+height};
 	float texcoords[8] = {texcoord_x1, texcoord_y1, texcoord_x2, texcoord_y1, texcoord_x2, texcoord_y2, texcoord_x1, texcoord_y2};
 	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
+	//glEnableClientState(GL_VERTEX_ARRAY);
+	//glEnableClientState( GL_TEXTURE_COORD_ARRAY );
 	
-	glColor4f(1.0, 1.0, 1.0, opacity);
-	glVertexPointer(2, GL_FLOAT, 0, vertices);
-	glTexCoordPointer( 2, GL_FLOAT, 0, texcoords);
+	//glColor4f(1.0, 1.0, 1.0, opacity);
+	//glVertexPointer(2, GL_FLOAT, 0, vertices);
+	//glTexCoordPointer( 2, GL_FLOAT, 0, texcoords);
 	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 	
-	glColor4f(1.0, 1.0, 1.0, 1.0);
+	//glColor4f(1.0, 1.0, 1.0, 1.0);
 	
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState(GL_VERTEX_ARRAY);
+	//glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	//glDisableClientState(GL_VERTEX_ARRAY);
 	
 	glDisable(GL_BLEND);
 	glDisable(GL_TEXTURE_2D);
