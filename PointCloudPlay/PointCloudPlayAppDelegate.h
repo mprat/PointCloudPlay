@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PointCloudPlayAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PointCloudPlayAppDelegate : NSObject <UIApplicationDelegate> {
+    UIWindow *window;
+	//HardwareController *cameraViewController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+//@property (nonatomic, retain) HardwareController *cameraViewController;
 
 @end
