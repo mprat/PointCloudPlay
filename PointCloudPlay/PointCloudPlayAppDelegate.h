@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HardwareController.h"
+
+@class HardwareController;
 
 @interface PointCloudPlayAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	//HardwareController *cameraViewController;
+	HardwareController *cameraViewController;
 }
 
-@property (strong, nonatomic) UIWindow *window;
-//@property (nonatomic, retain) HardwareController *cameraViewController;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) HardwareController *cameraViewController;
 
 @end

@@ -2,7 +2,7 @@
 //  TextureUtilities.h
 //  PointCloudPlay
 //
-//  Created by Michele Pratusevich on 2/4/13.
+//  Created by Michele Pratusevich on 2/5/13.
 //  Copyright (c) 2013 Michele Pratusevich. All rights reserved.
 //
 
@@ -12,7 +12,10 @@
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 
-extern "C" { bool read_png_image(const char *filename, char **data, int *width, int *height); }
+extern "C"
+{
+    bool read_png_image(const char *filename, char **data, int *width, int *height);
+}
 
 GLuint create_texture(char *data, int width, int height, bool pixel_texture = false, GLenum texture_format = GL_RGBA);
 GLuint read_png_texture(const char *name, bool pixel_texture = false);

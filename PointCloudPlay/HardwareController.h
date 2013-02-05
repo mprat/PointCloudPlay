@@ -12,8 +12,9 @@
 #import <CoreMotion/CoreMotion.h>
 
 #import "GLView.h"
+#import "PointCloudApplication.h"
 
-class PointCloudApplication;
+//@class PointCloudApplication;
 
 @interface HardwareController : UIViewController<GLViewDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate, UIAlertViewDelegate> {
 	AVCaptureSession *captureSession;
@@ -29,6 +30,31 @@ class PointCloudApplication;
 	BOOL device_motion_available;
 	double g_scale;
 }
+
+- (void)startGraphics;
+
+- (void)stopGraphics;
+
+- (void)startCamera;
+
+- (void)restartCamera;
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+
+- (void)drawView:(GLView*)view;
+
+- (void)setupView:(GLView*)view;
+
+- (void)realCaptureOutput: (id)pixelData;
+
+- (void)initCapture;
+
+- (void)eventHandler:(id)data;
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @property (nonatomic, retain) AVCaptureSession *captureSession;
 @property (nonatomic, retain) GLView *glView;

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9828EBC216C04EB30060F0F1 /* TextureUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */; };
 		9828EBC916C058E10060F0F1 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9828EBC816C058E10060F0F1 /* App.cpp */; };
 		9889EDEE16C021590009F1C7 /* libpointcloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9889EDEC16C021590009F1C7 /* libpointcloud.a */; };
 		9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */; };
 		9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDF616C028460009F1C7 /* HardwareController.mm */; };
 		9889EDFD16C0292E0009F1C7 /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9889EDFC16C0292E0009F1C7 /* GLView.m */; };
+		98B0B4A216C19A5B001116AC /* TextureUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B0B4A016C19A5B001116AC /* TextureUtilities.cpp */; };
 		98E9E58816BAFAF700BB5DB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58716BAFAF700BB5DB9 /* UIKit.framework */; };
 		98E9E58A16BAFAF700BB5DB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58916BAFAF700BB5DB9 /* Foundation.framework */; };
 		98E9E58C16BAFAF700BB5DB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9E58B16BAFAF700BB5DB9 /* CoreGraphics.framework */; };
@@ -27,13 +27,9 @@
 		98E9E5A516BAFAF700BB5DB9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E5A316BAFAF700BB5DB9 /* MainStoryboard.storyboard */; };
 		98E9E5A716BAFAF700BB5DB9 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E5A616BAFAF700BB5DB9 /* Shader.fsh */; };
 		98E9E5A916BAFAF700BB5DB9 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 98E9E5A816BAFAF700BB5DB9 /* Shader.vsh */; };
-		98E9E5AC16BAFAF700BB5DB9 /* PointCloudPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E9E5AB16BAFAF700BB5DB9 /* PointCloudPlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9828EBBE16C04EA00060F0F1 /* TextureUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextureUtilities.h; path = ../TextureUtilities.h; sourceTree = "<group>"; };
-		9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureUtilities.cpp; sourceTree = "<group>"; };
-		9828EBC116C04EB30060F0F1 /* TextureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureUtilities.h; sourceTree = "<group>"; };
 		9828EBC716C058D70060F0F1 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		9828EBC816C058E10060F0F1 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		9889EDEB16C0210C0009F1C7 /* PointCloudApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointCloudApplication.h; sourceTree = "<group>"; };
@@ -44,6 +40,8 @@
 		9889EDF616C028460009F1C7 /* HardwareController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HardwareController.mm; sourceTree = "<group>"; };
 		9889EDFB16C0292E0009F1C7 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
 		9889EDFC16C0292E0009F1C7 /* GLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
+		98B0B4A016C19A5B001116AC /* TextureUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureUtilities.cpp; sourceTree = "<group>"; };
+		98B0B4A116C19A5B001116AC /* TextureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureUtilities.h; sourceTree = "<group>"; };
 		98E9E58316BAFAF700BB5DB9 /* PointCloudPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointCloudPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E9E58716BAFAF700BB5DB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98E9E58916BAFAF700BB5DB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,8 +60,6 @@
 		98E9E5A416BAFAF700BB5DB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		98E9E5A616BAFAF700BB5DB9 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
 		98E9E5A816BAFAF700BB5DB9 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		98E9E5AA16BAFAF700BB5DB9 /* PointCloudPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointCloudPlayViewController.h; sourceTree = "<group>"; };
-		98E9E5AB16BAFAF700BB5DB9 /* PointCloudPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointCloudPlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +111,6 @@
 		98E9E59116BAFAF700BB5DB9 /* PointCloudPlay */ = {
 			isa = PBXGroup;
 			children = (
-				9828EBBE16C04EA00060F0F1 /* TextureUtilities.h */,
 				9889EDEC16C021590009F1C7 /* libpointcloud.a */,
 				9889EDED16C021590009F1C7 /* PointCloud.h */,
 				98E9E59A16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.h */,
@@ -123,8 +118,6 @@
 				98E9E5A316BAFAF700BB5DB9 /* MainStoryboard.storyboard */,
 				98E9E5A616BAFAF700BB5DB9 /* Shader.fsh */,
 				98E9E5A816BAFAF700BB5DB9 /* Shader.vsh */,
-				98E9E5AA16BAFAF700BB5DB9 /* PointCloudPlayViewController.h */,
-				98E9E5AB16BAFAF700BB5DB9 /* PointCloudPlayViewController.m */,
 				98E9E59216BAFAF700BB5DB9 /* Supporting Files */,
 				9889EDEB16C0210C0009F1C7 /* PointCloudApplication.h */,
 				9889EDEF16C021A10009F1C7 /* PointCloudApplication.cpp */,
@@ -132,10 +125,10 @@
 				9889EDF616C028460009F1C7 /* HardwareController.mm */,
 				9889EDFB16C0292E0009F1C7 /* GLView.h */,
 				9889EDFC16C0292E0009F1C7 /* GLView.m */,
-				9828EBC016C04EB30060F0F1 /* TextureUtilities.cpp */,
-				9828EBC116C04EB30060F0F1 /* TextureUtilities.h */,
 				9828EBC716C058D70060F0F1 /* App.h */,
 				9828EBC816C058E10060F0F1 /* App.cpp */,
+				98B0B4A016C19A5B001116AC /* TextureUtilities.cpp */,
+				98B0B4A116C19A5B001116AC /* TextureUtilities.h */,
 			);
 			path = PointCloudPlay;
 			sourceTree = "<group>";
@@ -225,12 +218,11 @@
 			files = (
 				98E9E59816BAFAF700BB5DB9 /* main.m in Sources */,
 				98E9E59C16BAFAF700BB5DB9 /* PointCloudPlayAppDelegate.mm in Sources */,
-				98E9E5AC16BAFAF700BB5DB9 /* PointCloudPlayViewController.m in Sources */,
 				9889EDF016C021A10009F1C7 /* PointCloudApplication.cpp in Sources */,
 				9889EDF716C028460009F1C7 /* HardwareController.mm in Sources */,
 				9889EDFD16C0292E0009F1C7 /* GLView.m in Sources */,
-				9828EBC216C04EB30060F0F1 /* TextureUtilities.cpp in Sources */,
 				9828EBC916C058E10060F0F1 /* App.cpp in Sources */,
+				98B0B4A216C19A5B001116AC /* TextureUtilities.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

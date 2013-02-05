@@ -23,7 +23,6 @@ inline double current_time() {
     return CACurrentMediaTime();
 }
 
-
 class PointCloudApplication {
 	
 public:

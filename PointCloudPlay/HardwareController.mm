@@ -1,12 +1,11 @@
-//
-//  HardwareController.m
-//  PointCloudPlay
-//
-//  Created by Michele Pratusevich on 2/4/13.
-//  Copyright (c) 2013 Michele Pratusevich. All rights reserved.
-//
+/**
+ * Copyright (C) 2012 13th Lab AB
+ *
+ * See the LICENSE file that came with this example code.
+ */
 
 #import "HardwareController.h"
+#include "App.h"
 
 #import <AVFoundation/AVCaptureOutput.h>
 #import <CoreVideo/CVPixelBuffer.h>
@@ -232,7 +231,7 @@ machineName()
 											  cancelButtonTitle:@"Quit"
 											  otherButtonTitles:nil];
 		[alert show];
-		[alert release];
+//		[alert release];
 		return;
 	}
     
@@ -247,7 +246,7 @@ machineName()
 		}
 	}
 	
-    AVCaptureDeviceInput *devInput = [[[AVCaptureDeviceInput alloc] initWithDevice:device error:&outError] autorelease];
+    AVCaptureDeviceInput *devInput = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&outError];
     
     if (!devInput) {
         NSLog(@"ERROR: %@",outError);
@@ -258,10 +257,10 @@ machineName()
 		NSLog(@"Device is nil");
 	}
 	
-	AVCaptureVideoDataOutput *output = [[[AVCaptureVideoDataOutput alloc] init] autorelease];
+	AVCaptureVideoDataOutput *output = [[AVCaptureVideoDataOutput alloc] init];
     output.alwaysDiscardsLateVideoFrames = YES;
     
-    NSMutableDictionary *videoSettings = [[[NSMutableDictionary alloc] init] autorelease];
+    NSMutableDictionary *videoSettings = [[NSMutableDictionary alloc] init];
     
     [videoSettings setValue:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA] forKey:(NSString*) kCVPixelBufferPixelFormatTypeKey];
     
@@ -342,7 +341,7 @@ machineName()
 		NSString* documentsDirectory = [paths objectAtIndex:0]; // User-accesible file system path
 		NSString *resourcePath = [NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] resourcePath]];
         
-		pointcloudApplication = new TestApp(self.glView.bounds.size.width,
+		pointcloudApplication = new App(self.glView.bounds.size.width,
 											self.glView.bounds.size.height,
 											w,
 											h,
@@ -381,7 +380,7 @@ machineName()
         [self realCaptureOutput: data];
     }
     
-    [data release];
+//    [data release];
 	
     CFRelease(sampleBuffer);
 }
@@ -407,10 +406,10 @@ machineName()
 	return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)dealloc {
-	[captureSession release];
-	[super dealloc];
-}
+//- (void)dealloc {
+//	[captureSession release];
+//	[super dealloc];
+//}
 
 @end
 
@@ -466,4 +465,3 @@ static char * getRGBA(UIImage * image) {
 	
 	return (char*) data;
 }
-
