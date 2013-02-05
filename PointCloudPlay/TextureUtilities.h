@@ -19,6 +19,6 @@ extern "C"
 
 GLuint create_texture(char *data, int width, int height, bool pixel_texture = false, GLenum texture_format = GL_RGBA);
 GLuint read_png_texture(const char *name, bool pixel_texture = false);
-void draw_image(GLuint texture_id, double x, double y, double width, double height, double texcoord_x1, double texcoord_y1, double texcoord_x2, double texcoord_y2, double opacity=1.0);
+void draw_image (GLuint texture_id, double x, double y, double width, double height, double texcoord_x1, double texcoord_y1, double texcoord_x2, double texcoord_y2, double opacity=1.0);
 
 #endif /* defined(__PointCloudPlay__TextureUtilities__) */
